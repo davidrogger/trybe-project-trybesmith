@@ -6,7 +6,7 @@ export type NewUser = {
   username: string;
   classe: string;
   level: number;
-  password: string;
+  password?: string;
 };
 
-export type User = Index & NewUser;
+export type User = Index & Omit<NewUser, 'password'>;
