@@ -1,6 +1,6 @@
 export type Index = {
   id: number;
-}
+};
 
 export type NewProduct = {
   name: string;
