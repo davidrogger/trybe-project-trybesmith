@@ -1,7 +1,9 @@
 import express from 'express';
+import productRoute from './routes/product.route';
 
 const app = express();
-// initial commit
+
 app.use(express.json());
+app.use('/products', productRoute);
 
 export default app;
