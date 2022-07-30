@@ -11,7 +11,8 @@ class UserService {
 
   async create(user: NewUser): Promise<User> {
     const id = await this.model.create(user);
-    return { ...id, ...user } as User;
+    const { password, ...data } = user;
+    return { ...id, ...data } as User;
   }
 }
 
