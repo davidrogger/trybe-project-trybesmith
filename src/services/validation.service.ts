@@ -1,5 +1,6 @@
 import Joi, { Root, Schema } from 'joi';
 import Unprocessable from '../errors/Unprocessable';
+import { ProductOrder } from '../interface/order.interface';
 import { Index, NewProduct } from '../interface/product.interface';
 import { NewUser, UserLogin } from '../interface/user.interface';
 
@@ -13,7 +14,7 @@ class Validate {
   runSchema = (schema: Schema) => <T>(itemToScan: T): T => {
     const { error, value } = schema.validate(itemToScan);
     if (error) {
-      if (error.message.includes('must be')) throw new Unprocessable(error.message);
+      if (error.message.includes('must')) throw new Unprocessable(error.message);
       throw error;
     }
     return value;
@@ -46,6 +47,14 @@ class Validate {
       username: this.joi.string().required(),
       password: this.joi.string().required(),
     }))<UserLogin>(user);
+  }
+
+  productOrderBody(products: ProductOrder) {
+    return this.runSchema(this.joi.object({
+      productsIds: this.joi.array() // https://joi.dev/api/?v=17.6.0#anyruleset---aliases-
+        .$.has(this.joi.number()).rule({ message: '"productsIds" must include only numbers' })
+        .required(),
+    }))<ProductOrder>(products);
   }
 }
 
