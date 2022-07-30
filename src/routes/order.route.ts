@@ -1,10 +1,13 @@
 import { Router } from 'express';
 import 'express-async-errors';
 import OrderController from '../controllers/order.controller';
+import authentication from '../middlewares/authentication';
 
-const orderCOntroller = new OrderController();
+const orderController = new OrderController();
 const orderRoute = Router();
 
-orderRoute.get('/', orderCOntroller.getAll);
+orderRoute.get('/', orderController.getAll);
+orderRoute.use(authentication);
+orderRoute.post('/', orderController.create);
 
 export default orderRoute;

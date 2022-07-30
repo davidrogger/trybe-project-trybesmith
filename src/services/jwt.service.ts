@@ -1,12 +1,13 @@
 import { sign, verify } from 'jsonwebtoken';
+import Unauthorized from '../errors/Unauthorized';
 import { User } from '../interface/user.interface';
 
 const secret = process.env.SECRET || 'secret';
 
 class JwToken {
-  sign: typeof sign;
+  private sign: typeof sign;
 
-  verify: typeof verify;
+  private verify: typeof verify;
 
   constructor() {
     this.sign = sign;
@@ -18,8 +19,13 @@ class JwToken {
     return token;
   }
 
-  verifyData(token: string) {
-    return this.verify(token, secret);
+  verifyData(token: string): User {
+    try {
+      const tokenData = this.verify(token, secret);
+      return tokenData as User;
+    } catch (err) {
+      throw new Unauthorized('Invalid token');
+    }
   }
 }
 
