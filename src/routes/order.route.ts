@@ -1,5 +1,4 @@
 import { Router } from 'express';
-import 'express-async-errors';
 import OrderController from '../controllers/order.controller';
 import authentication from '../middlewares/authentication';
 
