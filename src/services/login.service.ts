@@ -1,4 +1,4 @@
-import { User, UserLogin } from '../interface/user.interface';
+import { User, UserLogin } from '../types/user.type';
 import connection from '../models/connection';
 import LoginModel from '../models/login.model';
 

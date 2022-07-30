@@ -1,8 +1,8 @@
 import Joi, { Root, Schema } from 'joi';
 import Unprocessable from '../errors/Unprocessable';
-import { ProductOrder } from '../interface/order.interface';
-import { Index, NewProduct } from '../interface/product.interface';
-import { NewUser, UserLogin } from '../interface/user.interface';
+import { ProductOrder } from '../types/order.type';
+import { Index, NewProduct } from '../types/product.type';
+import { NewUser, UserLogin } from '../types/user.type';
 
 class Validate {
   joi: Root;

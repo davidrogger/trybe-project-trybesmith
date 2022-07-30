@@ -1,4 +1,4 @@
-import { Order } from '../interface/order.interface';
+import { Order } from '../types/order.type';
 import connection from '../models/connection';
 import OrderModel from '../models/order.model';
 import ProductModel from '../models/product.model';

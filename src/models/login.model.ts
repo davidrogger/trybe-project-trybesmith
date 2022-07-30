@@ -1,6 +1,6 @@
 import { Pool } from 'mysql2/promise';
 import Unauthorized from '../errors/Unauthorized';
-import { User, UserLogin } from '../interface/user.interface';
+import { User, UserLogin } from '../types/user.type';
 
 class LoginModel {
   connection: Pool;

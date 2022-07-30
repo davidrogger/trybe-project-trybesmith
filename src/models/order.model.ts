@@ -1,5 +1,5 @@
 import { Pool, ResultSetHeader } from 'mysql2/promise';
-import { Index, Order } from '../interface/order.interface';
+import { Index, Order } from '../types/order.type';
 
 class OrderModel {
   connection: Pool;

@@ -1,6 +1,6 @@
 import { Pool, ResultSetHeader } from 'mysql2/promise';
 import NotFound from '../errors/NotFound';
-import { Index, NewUser } from '../interface/user.interface';
+import { Index, NewUser } from '../types/user.type';
 
 class UserModel {
   connection: Pool;

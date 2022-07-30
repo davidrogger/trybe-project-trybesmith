@@ -1,6 +1,6 @@
 import { sign, verify } from 'jsonwebtoken';
 import Unauthorized from '../errors/Unauthorized';
-import { User } from '../interface/user.interface';
+import { User } from '../types/user.type';
 
 const secret = process.env.SECRET || 'secret';
 
