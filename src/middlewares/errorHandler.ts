@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from 'express';
 
 const statusLibrary: Record<string, number> = {
   ValidationError: 400,
+  Unauthorized: 401,
   Unprocessable: 422,
 };
 
