@@ -1,7 +1,7 @@
 import Joi, { Root, Schema } from 'joi';
 import Unprocessable from '../errors/Unprocessable';
 import { Index, NewProduct } from '../interface/product.interface';
-import { NewUser } from '../interface/user.interface';
+import { NewUser, UserLogin } from '../interface/user.interface';
 
 class Validate {
   joi: Root;
@@ -39,6 +39,13 @@ class Validate {
       level: this.joi.number().min(1).required(),
       password: this.joi.string().min(8).required(),
     }))<NewUser>(newUser);
+  }
+
+  userLoginBody(user: UserLogin) {
+    return this.runSchema(this.joi.object({
+      username: this.joi.string().required(),
+      password: this.joi.string().required(),
+    }))<UserLogin>(user);
   }
 }
 
