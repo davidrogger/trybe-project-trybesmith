@@ -14,6 +14,11 @@ class UserService {
     const { password, ...data } = user;
     return { ...id, ...data } as User;
   }
+
+  async exists(tokenData: User): Promise<void> {
+    const { id } = tokenData;
+    await this.model.exists(id);
+  }
 }
 
 export default UserService;
