@@ -10,3 +10,5 @@ export type NewUser = {
 };
 
 export type User = Index & Omit<NewUser, 'password'>;
+
+export type UserLogin = Omit<NewUser, 'classe' | 'level'>;
