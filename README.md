@@ -129,7 +129,6 @@
   <summary>
       <span>Endpoint <code>/login</code></span>
   </summary>
-
   
   ## POST - `localhost:3000/login`
 
@@ -149,8 +148,6 @@
   > - **`400`**: Retorna um json com a mensagem indicando qual campo está pendente na requisição.
   > - **`401`**: Retorna um json com a mensagem indicando que o usuário ou senha são inválidos.
   > - **`500`**: Retorna um json com a mensagem indicando o error que ocorreu internamente no servidor.
-
-  </details>
 
   </details>
 
@@ -225,6 +222,8 @@
   
   ## GET - `localhost:3000/orders`
 
+
+  </details>
 
   </details>
 
