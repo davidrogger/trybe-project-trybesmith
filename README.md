@@ -103,33 +103,6 @@
 
   </details>
 
-  
-  <details>
-  <summary>
-    <strong>
-      ⚙️ Variáveis de ambiente
-    </strong>
-  </summary>
-
-  >Deve-se remover a extensão `sample` do arquivo .env na raiz do projeto com o seguinte conteúdo:
-  >```
-  >#### SERVER VARS
-  >NODE_ENV=development
-  >API_PORT=3000
-  >
-  >#### DATABASE VARS
-  >MYSQL_HOST=localhost
-  >MYSQL_PORT=3306
-  >MYSQL_DB_NAME=blogs-api
-  >MYSQL_USER=root
-  >MYSQL_PASSWORD=password
-  >
-  >#### SECRECT VARS
-  >JWT_SECRET=suaSenhaSecreta
-  >```
-  </details>
-
-
   <details>
   <summary>
     <strong>
@@ -160,6 +133,23 @@
   
   ## GET - `localhost:3000/login`
 
+  > - Rota responsável autenticar usuário e gerar um token de acesso.
+  > - Para autenticar o usuário, é necessário realizar uma requisição POST para URL: `localhost:3000/login` contendo um corpo json com:
+  > - `username` String sem restrições de caracteres.
+  > - `password` String sem restrições de caracteres.
+  >. Usuário deve estar cadastrado para ser considerado válido.
+  > ### Exemplo:
+  >```
+  >{
+  >  "email": "reigal",
+  >  "password": "1dragaonoceu"
+  >}
+  >```
+  > ### Status:
+  > - **`200`**: Retorna um json com o token para acessar rotas que precisam de autenticação.
+  > - **`400`**: Retorna um json com a mensagem indicando qual campo está pendente na requisição.
+  > - **`401`**: Retorna um json com a mensagem indicando que o usuário ou senha são inválidos.
+  > - **`500`**: Retorna um json com a mensagem indicando o error que ocorreu internamente no servidor.
 
   </details>
 
