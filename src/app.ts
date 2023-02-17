@@ -11,7 +11,6 @@ import productRoute from './routes/product.route';
 import userRoute from './routes/user.route';
 
 const app = express();
-// testando credential helper
 
 app.use(express.json());
 app.use('/products', productRoute);
