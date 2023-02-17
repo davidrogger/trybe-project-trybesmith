@@ -100,6 +100,19 @@
             "description": "Falha interna com o servidor."
           }
         }
+      },
+      "get": {
+        "summary": "Endpoint para busca de todos produtos.",
+        "description": "Rota responsável por mostar todos os produtos cadastrados.",
+        "tags": ["Products"],
+        "responses": {
+          "200": {
+            "description": "Busca realizada com sucesso"
+          },
+          "500": {
+            "description": "Falha interna com o servidor."
+          }
+        }
       }
     }
   },

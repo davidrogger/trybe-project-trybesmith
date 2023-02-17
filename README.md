@@ -210,6 +210,14 @@
   > - **`422`**: Retorna um json com a mensagem indicando qual campo está incorreto.
   > - **`500`**: Retorna um json com a mensagem indicando o error que ocorreu internamente no servidor.
 
+  ## GET - `localhost:3000/products`
+
+  > - Rota responsável por mostrar todos produtos cadastrados.
+  > - Para cadastrar o produto, é necessário realizar uma requisição GET para URL: `localhost:3000/products`.
+  > ### Status:
+  > - **`200`**: Retorna um json com todos os produtos cadastrados.
+  > - **`500`**: Retorna um json com a mensagem indicando o error que ocorreu internamente no servidor.
+
   <details>
   <summary>
       <span>Endpoint <code>/orders</code></span>
