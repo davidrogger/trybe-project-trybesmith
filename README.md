@@ -2,7 +2,7 @@
 
 ## Seção: `Introdução ao Typescript`
 
-- lore
+- Realizada uma apresentação sobre o superset Typescript e sua importância com as tipagens(Estática, dinâmica, forte e fraca), compreendendo a relação dele com o Javascript diferença entre compiladores e transpiladores.
 
 #
 <div align="center">
@@ -21,27 +21,27 @@
 #
 ## Projeto: `Trybesmith`
 
-- lore
+- API Rest de vendas de equipamentos, com acesso ao usuário, criação de novo usuário, novo pedido, e autenticação, com o foco de familiarizar com a declaração dos tipos e uso de classes no typescript.
 
 # Tecnologias e ferramentas usadas 🛠
 
-![JavaScript](https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=flat-square&logo=javascript&logoColor=000000&labelColor=%23F7DF1C&color=%23FFCE5A)
+![TypeScript](https://img.shields.io/badge/-TypeScript-235a97?style=flat-square&logo=typescript&logoColor=ffffff)
 ![Nodejs](https://img.shields.io/badge/-Nodejs-339933?style=flat-square&logo=Node.js&logoColor=ffffff)
 ![Docker](https://img.shields.io/badge/-Docker-fff?style=flat-square&logo=docker)
 ![Express](https://img.shields.io/badge/-Express-339999?style=flat-square&logo=express&logoColor=ffffff)
 ![Joi](https://img.shields.io/badge/-Joi-0080ff?style=flat-square&logo=joi)
 ![MySQL](https://img.shields.io/badge/-MySQL-EAA221?style=flat-square&logo=mysql&logoColor=1e4c68)
-![Sequelize](https://img.shields.io/badge/-Sequelize-02afef?style=flat-square&logo=sequelize&logoColor=ffffff)
 ![JWToken](https://img.shields.io/badge/-JWToken-000?style=flat-square&logo=jsonwebtokens&logoColor=d63aff)
 ![Swagger](https://img.shields.io/badge/-Swagger-85EA2D?style=flat-square&logo=swagger&logoColor=000)
 
 # Desafios
 
-- lore
+- Declarar variáveis e funções usando a forte tipagem do Typescript
+- Construir uma API usando o Typescript
 
 # Conclusão
 
-- lore
+- Para quem teve como primeira linguagem fluente o javascript, o Typescript no começo foi bem incomodo, ainda mais com um linter que exige bastante do seu código, ter que entender melhor o tipo que estamo usando para entrada ou saida de uma determinada função, mas com o crescimento da aplicação, isso facilita e muito a vida evitando erros na hora de rodar o código pois eles ja são apresentados enquanto escrevendo o código, dando muito mais controle sobre o código.
 
 </details>
 
