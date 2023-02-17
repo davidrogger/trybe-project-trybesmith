@@ -1,0 +1,11 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Project Trybesmith",
+    "description": "Projeto prático criando API Rest usando typescript",
+    "version": "1.0.0"
+  },
+  "paths": {
+    
+  }
+}
