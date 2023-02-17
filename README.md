@@ -215,11 +215,13 @@
   > - **`200`**: Retorna um json com todos os produtos cadastrados.
   > - **`500`**: Retorna um json com a mensagem indicando o error que ocorreu internamente no servidor.
 
+  </details>
+
   <details>
   <summary>
       <span>Endpoint <code>/orders</code></span>
   </summary>
-  
+
   ## GET - `localhost:3000/orders`
 
   > - Rota responsável por mostrar todos pedidos cadastrados.
@@ -244,8 +246,6 @@
   > - **`400`**: Retorna um json com a mensagem indicando qual campo está pendente na requisição.
   > - **`422`**: Retorna um json com a mensagem indicando qual campo está incorreto.
   > - **`500`**: Retorna um json com a mensagem indicando o error que ocorreu internamente no servidor.
-
-  </details>
 
   </details>
 
