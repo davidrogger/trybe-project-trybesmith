@@ -114,6 +114,21 @@
           }
         }
       }
+    },
+    "/orders": {
+      "get": {
+        "summary": "Endpoint para mostrar todos pedidos.",
+        "description": "Rota responsável por mostrar todos pedidos cadastrados.",
+        "tags": ["Orders"],
+        "responses": {
+          "200": {
+            "description": "Busca realizada com sucesso."
+          },
+          "500": {
+            "description": "Falha interna com o servidor."
+          }
+        }
+      }
     }
   },
   "components": {
