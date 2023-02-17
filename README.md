@@ -135,9 +135,8 @@
 
   > - Rota responsável autenticar usuário e gerar um token de acesso.
   > - Para autenticar o usuário, é necessário realizar uma requisição POST para URL: `localhost:3000/login` contendo um corpo json com:
-  > - `username` String sem restrições de caracteres.
-  > - `password` String sem restrições de caracteres.
-  >. Usuário deve estar cadastrado para ser considerado válido.
+  > - `username` Um usuário já cadastrado.
+  > - `password` Senha correspondente ao usuário cadastrado.
   > ### Exemplo:
   >```
   >{
@@ -153,15 +152,6 @@
 
   </details>
 
-  <details>
-  <summary>
-      <span>Endpoint <code>/products</code></span>
-  </summary>
-
-  
-  ## GET - `localhost:3000/products`
-
-
   </details>
 
   <details>
@@ -172,14 +162,43 @@
   
   ## GET - `localhost:3000/users`
 
+  > - Rota responsável por cadastrar um novo usuário e gerar um token de acesso.
+  > - Para cadastrar o usuário, é necessário realizar uma requisição POST para URL: `localhost:3000/users` contendo um corpo json com:
+  > - `username` Não pode estar cadastrado e ter no mínimo 3 caractares.
+  > - `classe` Mínimo de 3 caractares.
+  > - `level` Ser um número acima de 1.
+  > - `password` Mínimo de 8 caractares.
+  > ### Exemplo:
+  >```
+  >{
+  >  "username": "jonasdoe",
+  >  "classe": "Fantasma",
+  >  "level": "20",
+  >  "password": "password123"
+  >}
+  >```
+  > ### Status:
+  > - **`200`**: Retorna um json com o token para acessar rotas que precisam de autenticação.
+  > - **`400`**: Retorna um json com a mensagem indicando qual campo está pendente na requisição.
+  > - **`422`**: Retorna um json com a mensagem indicando qual campo está incorreto.
+  > - **`500`**: Retorna um json com a mensagem indicando o error que ocorreu internamente no servidor.
 
   </details>
 
   <details>
   <summary>
-      <span>Endpoint <code>/orders</code></span>
+      <span>Endpoint <code>/products</code></span>
   </summary>
 
+  
+  ## GET - `localhost:3000/products`
+
+
+
+  <details>
+  <summary>
+      <span>Endpoint <code>/orders</code></span>
+  </summary>
   
   ## GET - `localhost:3000/orders`
 

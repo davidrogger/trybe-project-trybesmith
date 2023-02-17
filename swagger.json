@@ -27,10 +27,42 @@
             "description": "Autenticação realizada com sucesso."
           },
           "400": {
-            "description": "Ausência de campo obrigatório. `username` ou `password`"
+            "description": "Ausência de campo obrigatório."
           },
           "401": {
             "description": "Acesso não autorizado."
+          },
+          "500": {
+            "description": "Falha interna com o servidor."
+          }
+        }
+      }
+    },
+    "/users": {
+      "post": {
+        "summary": "Endpoint para cadastrar usuário.",
+        "description": "Rota responsável por realizar o cadastro de novos usuários.",
+        "tags": ["Users"],
+        "requestBody": {
+          "required": true,
+          "description": "O corpo deve conter os campos obrigatórios `username`, `classe`, `level` e `password`",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewUserBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Cadastro realizado com sucesso."
+          },
+          "400": {
+            "description": "Ausência de campo obrigatório."
+          },
+          "422": {
+            "description": "Preenchimento incorreto dos campos obrigatórios."
           },
           "500": {
             "description": "Falha interna com o servidor."
@@ -46,13 +78,38 @@
         "properties": {
           "username": {
             "type": "string",
-            "description": "Sem restrições de caracteres, usuário deve ser cadastrado.",
+            "description": "Usuário deve ser cadastrado.",
             "example": "reigal"
           },
           "password": {
             "type": "string",
-            "description": "Sem restrições de caracteres, a senha deve corresponder ao cadastro.",
+            "description": "A senha deve corresponder ao cadastro.",
             "example": "1dragaonoceu"
+          }
+        }
+      },
+      "NewUserBody": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "Deve ter no mínimo 3 caracteres, usuário não pode estar cadastrado.",
+            "example": "jonasdoe"
+          },
+          "classe": {
+            "type": "string",
+            "description": "Deve ter no mínimo 3 caracteres.",
+            "example": "Fantasma"
+          },
+          "level": {
+            "type": "string",
+            "description": "Deve ser um número acima de 1.",
+            "example": "20"
+          },
+          "password": {
+            "type": "string",
+            "description": "Deve ter no mínimo 8 caracteres, a senha deve corresponder ao cadastro.",
+            "example": "password123"
           }
         }
       }
