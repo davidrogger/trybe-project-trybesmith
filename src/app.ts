@@ -12,6 +12,8 @@ import userRoute from './routes/user.route';
 
 const app = express();
 
+// teste again
+
 app.use(express.json());
 app.use('/products', productRoute);
 app.use('/users', userRoute);
