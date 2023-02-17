@@ -69,6 +69,38 @@
           }
         }
       }
+    },
+    "/products": {
+      "post": {
+        "summary": "Endpoint cadastro de produtos",
+        "description": "Rota responsável pelo cadastro de novos produtos.",
+        "tags": ["Products"],
+        "requestBody": {
+          "required": true,
+          "description": "Corpo deve conter os campos obrigatórios `name` e `amount`.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewProductBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Cadastro realizado com sucesso."
+          },
+          "400": {
+            "description": "Ausência de campo obrigatório."
+          },
+          "422": {
+            "description": "Preenchimento incorreto dos campos obrigatórios."
+          },
+          "500": {
+            "description": "Falha interna com o servidor."
+          }
+        }
+      }
     }
   },
   "components": {
@@ -110,6 +142,21 @@
             "type": "string",
             "description": "Deve ter no mínimo 8 caracteres, a senha deve corresponder ao cadastro.",
             "example": "password123"
+          }
+        }
+      },
+      "NewProductBody": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Deve ter no mínimo 3 caracteres.",
+            "example": "Lençol branco"
+          },
+          "amount": {
+            "type": "string",
+            "description": "Deve ter no mínimo 3 caracteres.",
+            "example": "10 peças de prata"
           }
         }
       }

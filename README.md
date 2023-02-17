@@ -131,7 +131,7 @@
   </summary>
 
   
-  ## GET - `localhost:3000/login`
+  ## POST - `localhost:3000/login`
 
   > - Rota responsável autenticar usuário e gerar um token de acesso.
   > - Para autenticar o usuário, é necessário realizar uma requisição POST para URL: `localhost:3000/login` contendo um corpo json com:
@@ -160,7 +160,7 @@
   </summary>
 
   
-  ## GET - `localhost:3000/users`
+  ## POST - `localhost:3000/users`
 
   > - Rota responsável por cadastrar um novo usuário e gerar um token de acesso.
   > - Para cadastrar o usuário, é necessário realizar uma requisição POST para URL: `localhost:3000/users` contendo um corpo json com:
@@ -191,9 +191,24 @@
   </summary>
 
   
-  ## GET - `localhost:3000/products`
+  ## POST - `localhost:3000/products`
 
-
+  > - Rota responsável por cadastrar um novo produto.
+  > - Para cadastrar o produto, é necessário realizar uma requisição POST para URL: `localhost:3000/products` contendo um corpo json com:
+  > - `name` Mínimo 3 caractares.
+  > - `amount` Mínimo de 3 caractares.
+  > ### Exemplo:
+  >```
+  >{
+  >  "name": "Lençol branco",
+  >  "amount": "10 peças de prata",
+  >}
+  >```
+  > ### Status:
+  > - **`200`**: Retorna um json com os dados do produto cadastrado.
+  > - **`400`**: Retorna um json com a mensagem indicando qual campo está pendente na requisição.
+  > - **`422`**: Retorna um json com a mensagem indicando qual campo está incorreto.
+  > - **`500`**: Retorna um json com a mensagem indicando o error que ocorreu internamente no servidor.
 
   <details>
   <summary>
